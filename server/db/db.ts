@@ -1,5 +1,7 @@
 import { Connection, createConnection } from 'typeorm';
 
+import ChoreModel from './chore_model';
+
 import { getConfig, Config } from '../config';
 
 const dbConfig = getConfig().database;
@@ -18,7 +20,9 @@ export function onConnect(cb: (connection: Connection) => void) {
 createConnection({
   type: dbConfig.type,
   database: dbConfig.location,
-  entities: [],
+  entities: [
+    ChoreModel,
+  ],
   synchronize: true,
 }).then(c => {
   console.log(`Successfully connected to ${dbConfig.type} database at ${dbConfig.location}.`);

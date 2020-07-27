@@ -3,4 +3,5 @@ node_modules
 app/bundle.js
 client/**/*.js
 server/**/*.js
+shared/**/*.js
 *.db
