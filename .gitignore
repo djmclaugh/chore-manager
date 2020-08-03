@@ -1,6 +1,6 @@
 node_modules
 
-app/bundle.js
+public/bundle.js
 client/**/*.js
 server/**/*.js
 shared/**/*.js
