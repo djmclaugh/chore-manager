@@ -1,14 +1,14 @@
 import Vue, { VNode } from 'vue';
 import Component from 'vue-class-component';
 
-const RootProps = Vue.extend({
+const LandingPageProps = Vue.extend({
   props: {},
 });
 
 @Component({
   components: {},
 })
-export default class RootComponent extends RootProps {
+export default class LandingPage extends LandingPageProps {
   // Data
 
   // Computed

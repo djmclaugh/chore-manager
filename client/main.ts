@@ -1,14 +1,24 @@
 import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-import RootComponent from './components/root';
+import NotFoundPage from './pages/not_found_page';
+import LandingPage from './pages/landing_page';
+
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+  mode: 'history',
+  routes: [
+    { path: '/', component: LandingPage },
+    { path: '*', component: NotFoundPage },
+  ],
+});
 
 const v = new Vue({
   el: '#app',
-  components: {
-    root: RootComponent,
-  },
+  router: router,
   render: function(createElement) {
-    return createElement('root');
+    return createElement('router-view');
   },
 });
 
