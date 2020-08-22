@@ -2,6 +2,8 @@ node_modules
 
 public/bundle.js
 client/**/*.js
+client/config.json
 server/**/*.js
+server/config.json
 shared/**/*.js
 *.db

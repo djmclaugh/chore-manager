@@ -12,12 +12,12 @@ export interface Config {
 
 let configPath: string;
 if (process.argv.length == 2) {
-  console.log("No config file specified. Using 'config_default.json'.");
+  console.log("No server config file specified. Using 'config_default.json'.");
   configPath = "./config_default.json";
 } else {
   configPath = "./" + process.argv[2];
 }
-console.log("Loading configuration from '" + configPath + "'.");
+console.log("Loading server configuration from '" + configPath + "'.");
 const chosenConfig = validateConfig(require(configPath));
 
 function validateDatabase(dbConfig: any): DatabaseConfig {
